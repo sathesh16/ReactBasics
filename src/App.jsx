@@ -6,6 +6,7 @@ import './App.css'
 import BasicMap from './map/BasicMap'
 import PropGear from './props/PropGear'
 import StateGear from './state/StateGear'
+import LoginForm from "./forms/LoginForm";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -17,6 +18,7 @@ function App() {
           <Link to="/">Props</Link>
           <Link to="/state">State</Link>
           <Link to="/map">Map</Link>
+          <Link to="/login">Login</Link>
         </nav>
 
 
@@ -25,6 +27,7 @@ function App() {
           <Route path='/' element={<PropGear />} />
           <Route path='/state' element={<StateGear />} />
           <Route path='/map' element={<BasicMap />} />
+          <Route path="/login" element={<LoginForm />} />
         </Routes>
       </BrowserRouter>
       {/* <PropGear />
