@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function LoginForm() {
 
@@ -7,6 +8,7 @@ function LoginForm() {
     const [errorMessage, setErrorMessage] = useState('');
 
     // setErrorMessage('Enter details to continue')
+    let navigate = useNavigate()
 
     function handleLogin(e) {
         e.preventDefault();
@@ -16,7 +18,7 @@ function LoginForm() {
         }
 
         if (userName === "admin" && password === "admin@123") {
-            alert("Logged in successfully")
+            navigate("/state")
         } else {
             setErrorMessage('Login crendentials are incorrect')
         }
@@ -41,6 +43,7 @@ function LoginForm() {
                     <input type="submit" value="Submit" />
                 </div>
             </form>
+            
         </>
     )
 }

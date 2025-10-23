@@ -7,6 +7,8 @@ import BasicMap from './map/BasicMap'
 import PropGear from './props/PropGear'
 import StateGear from './state/StateGear'
 import LoginForm from "./forms/LoginForm";
+import ToDoList from "./todolist/ToDoList";
+import FormTheme from "./context/ThemeContext";
 
 function App() {
   // const [count, setCount] = useState(0)
@@ -19,6 +21,8 @@ function App() {
           <Link to="/state">State</Link>
           <Link to="/map">Map</Link>
           <Link to="/login">Login</Link>
+          <Link to="/todolist">To Do List</Link>
+          <Link to="/themecontext">Context</Link>
         </nav>
 
 
@@ -28,6 +32,8 @@ function App() {
           <Route path='/state' element={<StateGear />} />
           <Route path='/map' element={<BasicMap />} />
           <Route path="/login" element={<LoginForm />} />
+          <Route path="/todolist" element={<ToDoList />} />
+          <Route path="/themecontext" element={<FormTheme />} />
         </Routes>
       </BrowserRouter>
       {/* <PropGear />
